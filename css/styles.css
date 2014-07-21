@@ -1,3 +1,26 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+ a{
+  text-decoration: none;
+  color: #292526;
+ }
+
+ul{
+  padding: 0;
+  margin: 0;
+}
 
 html,
 body {
@@ -64,7 +87,7 @@ padding-top: 1rem;
 
 .first{
   height:100%;
-   background-color: black;
+   background-color:#F9AE3E;
          z-index: 0;
 
 }
@@ -210,6 +233,8 @@ padding-top: 1rem;
   width: -webkit-calc(100% / 4);
   width: calc(100% / 4);
 
+
+
 }
 
 .rows img{
@@ -220,7 +245,226 @@ padding-top: 1rem;
 }
 
 
+/* podcasts CSS*/
+.content-wrapper{
+  padding-top: 100px;
+  background-color: #F9AE3E;
+  padding-left: 10%;
+ padding-right: 10%;
+
+}
+
+h2{
+  font-family: tungsten;
+  font-weight: semibold;
+  font-size: 55px;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  display: block;
+  padding-bottom: 50px;
+
+
+}
+
+
+
+.table-container{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+.row{
+border-top: 1px solid #292526;
+border-left: 1px solid #292526;
+border-right: 1px solid #292526;
+vertical-align: middle;
+padding: 0px;
+margin: 0px;
+width: 100%;
+display: inline-block;
+
+
+}
+
+.row li{
+display: inline-block;
+
+padding: 15px 0px 15px 15px;
+  margin: 0;
+  float: left;
+  line-height: 45px;
+  vertical-align: middle;
+}
+
+
+
+.number{
+
+    font-family: tungsten;
+  font-weight: semibold;
+  font-size: 40px;
+  width: 10%;
+
+
+
+
+
+
+}
+
+
+
+.tablecopy{
+   font-family: gotham;
+  font-weight: book;
+  font-size: 14px;
+  letter-spacing:2px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+.description{
+  width: 15%;
+}
+
+.country{
+  width: 10%;
+
+
+
+}
+.country img{
+  vertical-align: middle;
+   filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+.country img:hover{
+   filter: none;
+    -webkit-filter: grayscale(0);
+  }
+
+.name{
+  width: 40%;
+
+
+}
+
+.episodes{
+width:25%;
+ height: 100%;
+ display: inline-block;
+ text-align: center;
+ text-transform: uppercase;
+
+
+ }
+
+ .episodes a:{
+  text-decoration: none;
+  color: #292526;
+  display: block;
+ }
+
+
+
+ .episodes a:after{
+  content:"";
+  width: 0px;
+  height: 0px;
+border-bottom: 5px solid transparent;  /* left arrow slant */
+  border-top: 5px solid transparent; /* right arrow slant */
+  border-left: 5px solid #2f2f2f; /* bottom, add background color here */
+  font-size: 0;
+  vertical-align: middle;
+ }
+
+
+ .episodes a:hover{
+   content:"View this podcast";
+ }
+
+
+
+
+
+
+ .tablespan{
+  width: 0px;
+  padding: 0;
+  margin: 0;
+ }
+
+.row li:hover{
+padding-left: 40px;
+   -moz-transition: padding-left .2s ease-in;
+     -o-transition: padding-left  .2s ease-in;
+     -webkit-transition: padding-left  .2s ease-in;
+     transition: padding-left  .2s ease-in;
+
+}
+
+
+
+/* all podcasts page */
+
+
+.fullscreen{
+  z-index: 50;
+  height: 100%;
+
+
+}
+
+.slideshow{
+
+
+
+
+}
+
+
+.first_img{
+ background-image: url(../images/thumbnail_1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* component CSS*/
+
+
+
+
 
 
 
@@ -505,10 +749,7 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
     height: 3em;
     width: 3em;
   }
-
-
-
-
+/* fonts */
 
 
 
