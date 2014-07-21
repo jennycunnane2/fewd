@@ -158,16 +158,18 @@ padding-top: 1rem;
   margin: 0 auto;
   z-index: 0;
   text-align: center;
+
     
 }
 
-
-
+/* heading fading*/
 #header{
-  animation: fadein 10s;
-    -moz-animation: fadein 10s; /* Firefox */
-    -webkit-animation: fadein 10s; /* Safari and Chrome */
-    -o-animation: fadein 10s; /* Opera */
+   -webkit-animation: fadein 2s; /* Safari and Chrome */
+       -moz-animation: fadein 2s; /* Firefox */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera */
+            animation: fadein 2s;
+
 }
 
 
@@ -252,6 +254,7 @@ padding-top: 1rem;
   padding-left: 10%;
  padding-right: 10%;
 
+
 }
 
 h2{
@@ -263,9 +266,110 @@ h2{
   text-transform: uppercase;
   display: block;
   padding-bottom: 50px;
+}
+
+
+.podcastbanner{
+  font-family: tungsten;
+  font-weight: semi bold;
+  font-size: 120px;
+  text-align: left;
+  color: black;
+  text-transform: uppercase;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 1px solid #292526;
+
+ -webkit-animation: color-change 2s ;
+    -moz-animation: color-change 2s ;
+    -o-animation: color-change 2s ;
+    -ms-animation: color-change 2s ;
+    animation: color-change 2s ;
+
+}
+
+@-webkit-keyframes color-change {
+    0% { color: #F9AE3E; }
+      50% { color: #94703c; }
+    100% { color: #292526; }
+
+}
+@-moz-keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+@-ms-keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+@-o-keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+@keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+}
+/* podcast detail page */
+
+.fullscreen{
+  width: 100%;
+  height: 100%;
+  background-color: #F9AE3E;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 100px;
+}
+
+.podcastsubtitle{
+  font-family: sentinel;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 52px;
+  width: 60%;
+  padding-top: 20px;
+  
+}
+.arrows ul{
+  right:0;
+position: fixed;
+padding-right:2%; 
+}
+
+
+#animate{
+position: relative;
+
+    -webkit-animation: arrowDown 1.3s 1  4s normal ease-in;
+
+    animation: arrowDown 1.3s 1 4s  normal ease-in;
 
 
 }
+@-webkit-keyframes arrowDown{
+    0% {
+        top:5px;
+    }
+    100% {
+        top: 500px;
+        position: static;
+    }
+}
+@keyframes arrowDown {
+      0% {
+        top:5px;
+    }
+    100% {
+        top: 500px;
+        position: static;
+    }
+}
+
 
 
 
@@ -418,19 +522,6 @@ padding-left: 40px;
 /* all podcasts page */
 
 
-.fullscreen{
-  z-index: 50;
-  height: 100%;
-
-
-}
-
-.slideshow{
-
-
-
-
-}
 
 
 .first_img{
@@ -439,7 +530,7 @@ padding-left: 40px;
     background-position: center;
     background-size: cover;
     width: 100%;
-
+    height: 100%;
 
 }
 
@@ -749,8 +840,5 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
     height: 3em;
     width: 3em;
   }
-/* fonts */
-
-
 
 
