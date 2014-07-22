@@ -45,7 +45,7 @@ body {
   padding-top: .5rem;
 
 
- 
+
 
 }
 
@@ -159,7 +159,7 @@ padding-top: 1rem;
   z-index: 0;
   text-align: center;
 
-    
+
 }
 
 /* heading fading*/
@@ -333,40 +333,38 @@ h2{
   line-height: 52px;
   width: 60%;
   padding-top: 20px;
-  
+
 }
 .arrows ul{
+	top:0;
   right:0;
 position: fixed;
-padding-right:2%; 
+height:100%;
+padding-top:200px;
+padding-right:2%;
 }
 
 
 #animate{
-position: relative;
-
-    -webkit-animation: arrowDown 1.3s 1  4s normal ease-in;
-
-    animation: arrowDown 1.3s 1 4s  normal ease-in;
-
-
+	position: absolute;
+    -webkit-animation: arrowDown 1.3s 1  4s normal forwards ease-in;
+    animation: arrowDown 1.3s 1 4s  normal forwards ease-in;
 }
 @-webkit-keyframes arrowDown{
     0% {
-        top:5px;
+		top:250px;
     }
     100% {
-        top: 500px;
-        position: static;
+        top: 100%;
+		margin-top:-50px;
     }
 }
 @keyframes arrowDown {
-      0% {
-        top:5px;
+    0% {
+        bottom:100%;
     }
     100% {
-        top: 500px;
-        position: static;
+        bottom: 0px;
     }
 }
 
@@ -564,10 +562,10 @@ padding-left: 40px;
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  position:relative;
   margin: 0;
   padding: 0;
   list-style: none;
-  position: relative
 }
 
 
